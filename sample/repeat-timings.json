@@ -1,0 +1,182 @@
+{
+  "date_utc": "2026-11-22T10:19:56.774302+00:00",
+  "model_file": "Qwen3.5-9B-Q4_K_M.gguf",
+  "model_sha256": "03b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8",
+  "device": "Vulkan0",
+  "bench_flags": [
+    "-ngl",
+    "99",
+    "-p",
+    "512",
+    "-n",
+    "128",
+    "-b",
+    "256",
+    "-ub",
+    "128",
+    "-r",
+    "3",
+    "-o",
+    "json"
+  ],
+  "builds": {
+    "baseline": {
+      "build_number": 11193,
+      "build_commit": "4e7481175",
+      "gpu_info": "AMD Radeon RX 5700 XT",
+      "cpu_info": "AMD Ryzen 5 3600 6-Core Processor",
+      "devices": "Vulkan0",
+      "backends": "Vulkan",
+      "model_type": "qwen35 9B Q4_K - Medium",
+      "n_threads": 6
+    },
+    "candidate": {
+      "build_number": 12631,
+      "build_commit": "e300919cc",
+      "gpu_info": "AMD Radeon RX 5700 XT",
+      "cpu_info": "AMD Ryzen 5 3600 6-Core Processor",
+      "devices": "Vulkan0",
+      "backends": "Vulkan",
+      "model_type": "qwen35 9B Q4_K - Medium",
+      "n_threads": 6
+    }
+  },
+  "trials": [
+    {
+      "build": "baseline",
+      "tests": {
+        "prefill_512": {
+          "tokens_per_second": [
+            140.803,
+            138.028,
+            140.792
+          ],
+          "nanoseconds": [
+            3636285700,
+            3709396200,
+            3636571600
+          ],
+          "utc": "2026-11-22T10:20:25Z"
+        },
+        "decode_128": {
+          "tokens_per_second": [
+            28.4199,
+            24.9636,
+            30.0246
+          ],
+          "nanoseconds": [
+            4503882200,
+            5127475400,
+            4263177300
+          ],
+          "utc": "2026-11-22T10:20:40Z"
+        }
+      }
+    },
+    {
+      "build": "candidate",
+      "tests": {
+        "prefill_512": {
+          "tokens_per_second": [
+            465.875,
+            467.275,
+            466.374
+          ],
+          "nanoseconds": [
+            1099007700,
+            1095714100,
+            1097831500
+          ],
+          "utc": "2026-11-22T10:21:13Z"
+        },
+        "decode_128": {
+          "tokens_per_second": [
+            52.8871,
+            52.6156,
+            52.6932
+          ],
+          "nanoseconds": [
+            2420248600,
+            2432737300,
+            2429158100
+          ],
+          "utc": "2026-11-22T10:21:17Z"
+        }
+      }
+    },
+    {
+      "build": "candidate",
+      "tests": {
+        "prefill_512": {
+          "tokens_per_second": [
+            464.794,
+            466.014,
+            368.508
+          ],
+          "nanoseconds": [
+            1101564400,
+            1098680600,
+            1389387400
+          ],
+          "utc": "2026-11-22T10:21:40Z"
+        },
+        "decode_128": {
+          "tokens_per_second": [
+            49.09,
+            52.269,
+            52.5179
+          ],
+          "nanoseconds": [
+            2607455700,
+            2448870200,
+            2437266300
+          ],
+          "utc": "2026-11-22T10:21:45Z"
+        }
+      }
+    },
+    {
+      "build": "baseline",
+      "tests": {
+        "prefill_512": {
+          "tokens_per_second": [
+            139.087,
+            137.497,
+            139.535
+          ],
+          "nanoseconds": [
+            3681141900,
+            3723710200,
+            3669322500
+          ],
+          "utc": "2026-11-22T10:22:12Z"
+        },
+        "decode_128": {
+          "tokens_per_second": [
+            29.8138,
+            29.469,
+            29.9452
+          ],
+          "nanoseconds": [
+            4293319700,
+            4343540100,
+            4274470000
+          ],
+          "utc": "2026-11-22T10:22:27Z"
+        }
+      }
+    }
+  ],
+  "summary": {
+    "prefill_512": {
+      "baseline": 139.31099999999998,
+      "candidate": 465.9445,
+      "ratio": 3.3446353841405205
+    },
+    "decode_128": {
+      "baseline": 29.6414,
+      "candidate": 52.56675,
+      "ratio": 1.7734233200860958
+    }
+  }
+}

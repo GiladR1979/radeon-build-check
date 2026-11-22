@@ -1,0 +1,182 @@
+{
+  "date_utc": "2026-11-22T10:10:39.420750+00:00",
+  "model_file": "Qwen3.5-9B-Q4_K_M.gguf",
+  "model_sha256": "03b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8",
+  "device": "Vulkan0",
+  "bench_flags": [
+    "-ngl",
+    "99",
+    "-p",
+    "512",
+    "-n",
+    "128",
+    "-b",
+    "256",
+    "-ub",
+    "128",
+    "-r",
+    "3",
+    "-o",
+    "json"
+  ],
+  "builds": {
+    "baseline": {
+      "build_number": 11193,
+      "build_commit": "4e7481175",
+      "gpu_info": "AMD Radeon RX 5700 XT",
+      "cpu_info": "AMD Ryzen 5 3600 6-Core Processor",
+      "devices": "Vulkan0",
+      "backends": "Vulkan",
+      "model_type": "qwen35 9B Q4_K - Medium",
+      "n_threads": 6
+    },
+    "candidate": {
+      "build_number": 12631,
+      "build_commit": "e300919cc",
+      "gpu_info": "AMD Radeon RX 5700 XT",
+      "cpu_info": "AMD Ryzen 5 3600 6-Core Processor",
+      "devices": "Vulkan0",
+      "backends": "Vulkan",
+      "model_type": "qwen35 9B Q4_K - Medium",
+      "n_threads": 6
+    }
+  },
+  "trials": [
+    {
+      "build": "baseline",
+      "tests": {
+        "prefill_512": {
+          "tokens_per_second": [
+            139.436,
+            140.07,
+            141.687
+          ],
+          "nanoseconds": [
+            3671931800,
+            3655314200,
+            3613587500
+          ],
+          "utc": "2026-11-22T10:11:09Z"
+        },
+        "decode_128": {
+          "tokens_per_second": [
+            30.1868,
+            30.1265,
+            30.023
+          ],
+          "nanoseconds": [
+            4240266800,
+            4248747800,
+            4263402600
+          ],
+          "utc": "2026-11-22T10:11:27Z"
+        }
+      }
+    },
+    {
+      "build": "candidate",
+      "tests": {
+        "prefill_512": {
+          "tokens_per_second": [
+            467.186,
+            468.013,
+            466.398
+          ],
+          "nanoseconds": [
+            1095923500,
+            1093986100,
+            1097774600
+          ],
+          "utc": "2026-11-22T10:11:58Z"
+        },
+        "decode_128": {
+          "tokens_per_second": [
+            52.8794,
+            52.9221,
+            52.7939
+          ],
+          "nanoseconds": [
+            2420601300,
+            2418648700,
+            2424522000
+          ],
+          "utc": "2026-11-22T10:12:03Z"
+        }
+      }
+    },
+    {
+      "build": "candidate",
+      "tests": {
+        "prefill_512": {
+          "tokens_per_second": [
+            466.912,
+            465.857,
+            467.734
+          ],
+          "nanoseconds": [
+            1096566900,
+            1099049600,
+            1094639800
+          ],
+          "utc": "2026-11-22T10:12:27Z"
+        },
+        "decode_128": {
+          "tokens_per_second": [
+            52.894,
+            52.4448,
+            52.5017
+          ],
+          "nanoseconds": [
+            2419934100,
+            2440662600,
+            2438016800
+          ],
+          "utc": "2026-11-22T10:12:32Z"
+        }
+      }
+    },
+    {
+      "build": "baseline",
+      "tests": {
+        "prefill_512": {
+          "tokens_per_second": [
+            139.626,
+            136.218,
+            125.799
+          ],
+          "nanoseconds": [
+            3666936900,
+            3758674000,
+            4069997800
+          ],
+          "utc": "2026-11-22T10:13:00Z"
+        },
+        "decode_128": {
+          "tokens_per_second": [
+            28.7686,
+            29.9347,
+            29.9952
+          ],
+          "nanoseconds": [
+            4449290700,
+            4275975200,
+            4267348000
+          ],
+          "utc": "2026-11-22T10:13:15Z"
+        }
+      }
+    }
+  ],
+  "summary": {
+    "prefill_512": {
+      "baseline": 139.531,
+      "candidate": 467.049,
+      "ratio": 3.347277665895034
+    },
+    "decode_128": {
+      "baseline": 30.0091,
+      "candidate": 52.83665,
+      "ratio": 1.7606875914305993
+    }
+  }
+}

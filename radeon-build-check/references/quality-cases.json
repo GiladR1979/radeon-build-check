@@ -1,0 +1,11 @@
+{
+  "system": "Answer from the supplied record only. Return a JSON object with a single field named answer and a string value. Use UNKNOWN if the record does not establish the answer. Respect the output format requested for each question.",
+  "cases": [
+    {"id":"inventory","record":"The workshop has 14 blue clips. Four blue clips are reserved. The 29 green clips are all available.","question":"How many blue clips are available? Return only the number in the answer field.","expected":"10"},
+    {"id":"revision","record":"Draft 2 planned the ferry for Tuesday. The signed revision moves the ferry to Thursday. The bus remains on Tuesday.","question":"Under the signed plan, which weekday does the ferry leave? Use its English weekday name.","expected":"Thursday"},
+    {"id":"unknown","record":"The entry log lists a start time of 08:15 and a room called Maple. No end time was entered.","question":"What time did the meeting end?","expected":"UNKNOWN"},
+    {"id":"ordering","record":"Orders in arrival order: N1 ready; N2 queued; N3 ready; N4 cancelled.","question":"List only the ready order IDs in arrival order. Separate them with a comma and no spaces.","expected":"N1,N3"},
+    {"id":"scoping","record":"The red plan provides overnight shipping. The blue plan provides pickup. Both plans include packaging.","question":"How many days does shipping take for the blue plan?","expected":"UNKNOWN"},
+    {"id":"boundary","record":"Access is valid starting on March 3, through March 7 inclusive. The inspection is scheduled on March 8.","question":"Will access still be valid on the inspection date? Return yes or no in lowercase.","expected":"no"}
+  ]
+}

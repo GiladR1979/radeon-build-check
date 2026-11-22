@@ -1,0 +1,87 @@
+{
+  "model": "Qwen3.5-9B Q4_K_M",
+  "temperature": 0,
+  "seed": 73,
+  "max_tokens": 64,
+  "thinking": false,
+  "responses": {
+    "baseline": [
+      {
+        "id": "inventory",
+        "expected": "10",
+        "response": "{\n  \"answer\": \"10\"\n}",
+        "pass": true
+      },
+      {
+        "id": "revision",
+        "expected": "Thursday",
+        "response": "{\n  \"answer\": \"Thursday\"\n}",
+        "pass": true
+      },
+      {
+        "id": "unknown",
+        "expected": "UNKNOWN",
+        "response": "{\n  \"answer\": \"UNKNOWN\"\n}",
+        "pass": true
+      },
+      {
+        "id": "ordering",
+        "expected": "N1,N3",
+        "response": "{\n  \"answer\": \"N1,N3\"\n}",
+        "pass": true
+      },
+      {
+        "id": "scoping",
+        "expected": "UNKNOWN",
+        "response": "{\n  \"answer\": \"UNKNOWN\"\n}",
+        "pass": true
+      },
+      {
+        "id": "boundary",
+        "expected": "no",
+        "response": "{\n  \"answer\": \"no\"\n}",
+        "pass": true
+      }
+    ],
+    "candidate": [
+      {
+        "id": "inventory",
+        "expected": "10",
+        "response": "{\n  \"answer\": \"10\"\n}",
+        "pass": true
+      },
+      {
+        "id": "revision",
+        "expected": "Thursday",
+        "response": "{\n  \"answer\": \"Thursday\"\n}",
+        "pass": true
+      },
+      {
+        "id": "unknown",
+        "expected": "UNKNOWN",
+        "response": "{\n  \"answer\": \"UNKNOWN\"\n}",
+        "pass": true
+      },
+      {
+        "id": "ordering",
+        "expected": "N1,N3",
+        "response": "{\n  \"answer\": \"N1,N3\"\n}",
+        "pass": true
+      },
+      {
+        "id": "scoping",
+        "expected": "UNKNOWN",
+        "response": "{\n  \"answer\": \"UNKNOWN\"\n}",
+        "pass": true
+      },
+      {
+        "id": "boundary",
+        "expected": "no",
+        "response": "{\n  \"answer\": \"no\"\n}",
+        "pass": true
+      }
+    ]
+  },
+  "post_author": "local Qwen3.5-9B opener with measured figures inserted by the runner",
+  "local_model_followup": "Run a new test where you keep the model, hardware, and quantization identical but vary the prompt length from short to very long. Measure how the output tokens per second change as the context window grows to see if performance degrades with longer inputs."
+}
